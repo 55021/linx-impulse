@@ -10,11 +10,11 @@ const Share = () => {
         <p className={styles.share__text}>Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
         <form className={styles.share__form}>
           <div className={styles.field}>
-            <label htmlFor="nameFriend">Nome do seu amigo:</label>
+            <label className={styles.label} htmlFor="nameFriend">Nome do seu amigo:</label>
             <input type="text" id='nameFriend' name='nameFriend'></input>
           </div>
           <div className={styles.field}>
-            <label htmlFor="emailFriend">E-mail:</label>
+            <label className={styles.label} htmlFor="emailFriend">E-mail:</label>
             <input type="email" id='emailFriend' name='emailFriend'></input>
           </div>
         </form>

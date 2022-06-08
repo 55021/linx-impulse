@@ -4,7 +4,7 @@ import styles from './Produtos.module.css'
 import { useState } from 'react';
 import Titulo from '../Titulo/TItulo'
 import { fetchProdutos } from './fetch.js';
-import FetchBtn from './FetchBtn';
+import Botao from '../Botao/Botao';
 
 const Produtos = () => {
   const [produtos, setProdutos] = useState([]);
@@ -42,11 +42,13 @@ const Produtos = () => {
       <div className={styles.listaProdutos}>
         <Produto produtos={produtos}/>
       </div>
-      <div className={styles.wrapperProdutos} onClick={async () => {
+      <div
+        className={styles.wrapperBtn}
+        onClick={async () => {
           const novosProdutos = await resultProdutos();       
           setProdutos(produtos => [...produtos, ...novosProdutos]);
         }}>
-        <FetchBtn texto='Ainda mais produtos aqui!'/>
+        <Botao texto='Ainda mais produtos aqui!'/>
       </div>
     </section>
   )
